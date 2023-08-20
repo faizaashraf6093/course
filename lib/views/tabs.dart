@@ -1,14 +1,14 @@
 import 'package:course/views/courses.dart';
 import 'package:flutter/material.dart';
 
-class Courses extends StatefulWidget {
-  const Courses({super.key});
+class CourseTab extends StatefulWidget {
+  const CourseTab({super.key});
 
   @override
-  State<Courses> createState() => _CoursesState();
+  State<CourseTab> createState() => _CourseTabState();
 }
 
-class _CoursesState extends State<Courses> {
+class _CourseTabState extends State<CourseTab> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
