@@ -23,9 +23,9 @@ class _ProgramScreenState extends State<ProgramScreen> {
             color: Colors.grey,
           ),
         ),
-        body: Column(
+        body: const Column(
           children: [
-            const ProgramContainer(),
+            ProgramContainer(),
           ],
         ));
   }

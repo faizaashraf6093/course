@@ -1,5 +1,5 @@
-import 'package:course/views/dashboard.dart';
-import 'package:course/views/program.dart';
+import 'package:course/views/courses.dart';
+import 'package:course/views/tabs.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.green,
         useMaterial3: true,
       ),
-      home: const ProgramScreen(),
+      home: const CourseTab(),
     );
   }
 }

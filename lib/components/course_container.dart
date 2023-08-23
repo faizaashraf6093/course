@@ -19,7 +19,12 @@ class _CourseContainerState extends State<CourseContainer> {
     final height = MediaQuery.sizeOf(context).height;
     return Container(
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
+        // borderRadius: BorderRadius.circular(20),
+        // Removed the bottom left and right border
+        borderRadius: const BorderRadius.only(
+          topLeft: Radius.circular(20),
+          topRight: Radius.circular(20),
+        ),
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(0.2),
@@ -30,7 +35,7 @@ class _CourseContainerState extends State<CourseContainer> {
         color: Colors.white,
       ),
       width: width * .8,
-      height: height * .15,
+      height: height * .16,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
@@ -45,20 +50,29 @@ class _CourseContainerState extends State<CourseContainer> {
           const SizedBox(height: 30),
           Container(
             color: Colors.green,
-            height: 20,
+            height: 27,
+            width: width * .8,
             child: const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  '100% Complete',
-                  style: TextStyle(color: Colors.white),
+                // Added padding to the text and icon
+                Padding(
+                  padding: EdgeInsets.only(left: 8.0),
+                  child: Text(
+                    '100% Complete',
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
-                CircleAvatar(
-                    backgroundColor: Colors.amber,
-                    child: Icon(
-                      Icons.check,
-                      color: Colors.white,
-                    )),
+                Padding(
+                  padding: EdgeInsets.all(5.0),
+                  child: CircleAvatar(
+                      backgroundColor: Colors.amber,
+                      child: Icon(
+                        Icons.check,
+                        color: Colors.white,
+                        size: 16,
+                      )),
+                ),
               ],
             ),
           )

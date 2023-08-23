@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class Item extends StatefulWidget {
   final String text;
   final String image;
+  // ignore: prefer_typing_uninitialized_variables
   final callback;
   const Item({super.key, required this.text, required this.image, required this.callback});
 
