@@ -1,4 +1,3 @@
-import 'package:course/views/courses.dart';
 import 'package:course/views/tabs.dart';
 import 'package:flutter/material.dart';
 
